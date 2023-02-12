@@ -4,5 +4,7 @@ from . import views
 urlpatterns = [
     path('', views.post_list, name='post_list'),
     ## Create a path to link to post by its pk, use the post_detail view, name it post_detail
-    path('post/<int:pk>/', views.post_detail, name='post_detail')
+    path('post/<int:pk>/', views.post_detail, name='post_detail'),
+    ## Create a path to create a new post
+    path('post/new/', views.post_new, name='post_new')
 ]
